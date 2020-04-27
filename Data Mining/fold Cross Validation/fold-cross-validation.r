@@ -1,4 +1,4 @@
-source("inforetrieval.r")
+source("cmatrixInfo.r")
 source("neighboorFuncs.r")
 source("utility.r")
 
@@ -43,9 +43,11 @@ cMatrix3<- fillCMatrix(f3TS,f3TR,data,cMatrix3)
 print('fold 1')
 print(cMatrix1)
 print(CMatrixStats(cMatrix1))
+
 print('fold 2')
 print(cMatrix2)
 print(CMatrixStats(cMatrix2))
+
 print('fold 3')
 print(cMatrix3)
 print(CMatrixStats(cMatrix3))
