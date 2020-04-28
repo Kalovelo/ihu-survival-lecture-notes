@@ -3,9 +3,9 @@
 |                         Διανύσματα υποστήριξης                         |                                  Υπόλοιπα                                  |
 | :--------------------------------------------------------------------: | :------------------------------------------------------------------------: |
 |                    γνωστά και ως **Οριακά πρότυπα**                    |                       γνωστά και ως **καλά πρότυπα**                       |
-| Πρότυπα x για τα οποία ισχύει<br/> <img src="./images/support_vector.JPG"/> | Πρότυπα x για τα οποία ισχύει:<br/> <img src="./images/svm_simple_vectors.JPG"> |
+| Πρότυπα x για τα οποία ισχύει<br/> <img src="./images/support_vector.jpg"/> | Πρότυπα x για τα οποία ισχύει:<br/> <img src="./images/svm_simple_vectors.jpg"> |
 |                       βρίσκονται πάνω στο margin                       |                         βρίσκονται πέρα από margin                         |
-|            <img src="./images/svm_support_vectors_map.JPG">            |              <img src="./images/svm_simple_vectors_map.JPG">               |
+|            <img src="./images/svm_support_vectors_map.jpg">            |              <img src="./images/svm_simple_vectors_map.jpg">               |
 |                                  λ>0                                   |                                    λ=0                                     |
 
 <br/>
@@ -26,7 +26,7 @@
 
 | Σύμβολο |                            Επεξήγηση                            |
 | :-----: | :-------------------------------------------------------------: |
-|    Q    | Εσωτερικό γινόμενο διανυσμάτων<br/> <img src="./images/Q.JPG"/> |
+|    Q    | Εσωτερικό γινόμενο διανυσμάτων<br/> <img src="./images/Q_formula.jpg"/> |
 |    g    |                    Διάνυσμα με τιμές **-1**                     |
 |    λ    |                       Lagrange Multiplier                       |
 
@@ -39,8 +39,8 @@
 
 |                                                                                                                  |                                       |
 | :--------------------------------------------------------------------------------------------------------------: | :-----------------------------------: |
-|                                          Για τη βέλτιστη πόλωση ισχύει:                                          | <img src="./images/optimal_bias.JPG"> |
-| Αλλά, για λόγους αριθμητικής ακρίβειας ισχύει όπου έχουμε το **μέσο όρο** για όλα τα **διανύσματα υποστήριξης**. |  <img src="./images/mean_bias.JPG">   |
+|                                          Για τη βέλτιστη πόλωση ισχύει:                                          | <img src="./images/optimal_bias.jpg"> |
+| Αλλά, για λόγους αριθμητικής ακρίβειας ισχύει όπου έχουμε το **μέσο όρο** για όλα τα **διανύσματα υποστήριξης**. |  <img src="./images/mean_bias.jpg">   |
 
 
 
@@ -56,18 +56,18 @@
 
 #### Θέση του ξ
 
-<img src="./images/ksi.JPG">
+<img src="./images/ksi.jpg">
 
 #### Νέα συνάρτηση Κόστους
 
-<img src="./images/new_cost_function.JPG">
+<img src="./images/new_cost_function.jpg">
 
 όπου η C είναι μια σταθερά κόστους για την οποία ισχύει:  
 Όσο μικρότερη, τόσο αγνοώ τις μεταβλητές χαλαρότητας, άρα το σύστημα δεν πιέζεται για τη βελτιστοποίηση της ταξινόμησης.
 
 Και σκοπός είναι να ικανοποιούνται οι ανισότητες :  
 
-<img src="./images/new_cost_function2.JPG">
+<img src="./images/new_cost_function2.jpg">
 
 #### Τιμές του λ
 
@@ -75,7 +75,7 @@
 - Αν x πάνω στο margin τότε C>λ>0 (οριακό πρότυπο)
 - Αν x πάνω από margin τότε λ=0 (καλό πρότυπο)
 
-<img src="./images/value_of_lamda.JPG">
+<img src="./images/value_of_lamda.jpg">
 
 
 
@@ -83,9 +83,9 @@
 
 |                                                     Δυικό                                                     |                                                Νέο Δυικό                                                 |
 | :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
-|   καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./images/svm_simple_vectors.JPG"/>    | καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./images/svm_simple_vectors.JPG"/> |
-|     οριακό πρότυπο <span style="color:green">(κοινό)</span><br/><img src="./images/support_vector.JPG"/>      |  οριακό πρότυπο <span style="color:green">(κοινό)</span><br/> <img src="./images/support_vector.JPG"/>   |
-|                                                       -                                                       |                            κακό πρότυπο <br/> <img src="./images/bad_vectors.JPG"/>                            |
+|   καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./images/svm_simple_vectors.jpg"/>    | καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./images/svm_simple_vectors.jpg"/> |
+|     οριακό πρότυπο <span style="color:green">(κοινό)</span><br/><img src="./images/support_vector.jpg"/>      |  οριακό πρότυπο <span style="color:green">(κοινό)</span><br/> <img src="./images/support_vector.jpg"/>   |
+|                                                       -                                                       |                            κακό πρότυπο <br/> <img src="./images/bad_vectors.jpg"/>                            |
 | βέλτιστο διάνυσμα <span style="color:green">(κοινό)</span><br/> <img src="./images/dual_problem_weights.jpg"> | βέλτιστο διάνυσμα <span style="color:green">(κοινό)</span> <br/><img src="./images/dual_problem_weights.jpg"> |
 |      βέλτιστη πόλωση <span style="color:green">(κοινό)</span> <br/><img src="./images/optimal_bias.jpg">      |  βέλτιστη πόλωση  <span style="color:green">(κοινό)</span> <br/> <img src="./images/optimal_bias.jpg">   |
 |      Ελάχιστο συνάρτησης <span style="color:green">(κοινό)</span> <br/><img src="./images/minimum_lamda.jpg">      |  Ελάχιστο συνάρτησης  <span style="color:green">(κοινό)</span> <br/> <img src="./images/minimum_lamda.jpg">   |
