@@ -1,17 +1,73 @@
 # Support Vector Machine
 
-|                         Διανύσματα υποστήριξης                         |                                  Υπόλοιπα                                  |
-| :--------------------------------------------------------------------: | :------------------------------------------------------------------------: |
-|                    γνωστά και ως **Οριακά πρότυπα**                    |                       γνωστά και ως **καλά πρότυπα**                       |
+## Εισαγωγή
+
+<img src="./images/about_margin.JPG">
+
+**Σκοπός** : Η μεγιστοποίηση περιθωρίου ανάμεσα από τα οριακά πρότυπα, έτσι ώστε σε επόμενη προσθήκη προτύπου, να **ελαχιστοποιείται η πιθανότητα** το πρότυπο αυτό να θεωρηθεί της απέναντι κλάσης.
+
+
+Ψάχνουμε την ευθεία γραμμή που θα **χωρίζει βέλτιστα** τα πρότυπα σε κλάσεις αλλά και θα έχει το **μέγιστο δυνατό περιθώριο**.
+
+### Περιθώριο ταξινόμησης
+
+Περιθώριο : γ = min( γ0, γ1 )
+
+|                 Στοιχείο                 |               Τύπος               |
+| :--------------------------------------: | :-------------------------------: |
+| Απόσταση από το διαχωριστικό υπερεπίπεδο | <img src="./images/distance.JPG"> |
+|                Περιθώριο                 |  <img src="./images/margin.JPG">  |
+
+#### Μεγιστοποίηση Περιθωρίου ταξινόμησης
+
+θέλουμε να βρούμε τις τιμές **w**, b.
+
+<img src="./images/target_weight_bias.JPG">
+
+> με το argmax εννοούμε πως ψάχνουμε τις τιμές **w**,b για τις οποίες η τιμή της συνάρτησης **μεγιστοποιείται.** 
+
+<br/>
+<br/>
+
+Δύο Προσεγγίσεις
+
+|                         Παρονομαστής = 1                          |                            Αριθμητής = 1                             |
+| :----------------------------------------------------------------: | :------------------------------------------------------------------: |
+|     Μεγιστοποίηση <br/> <img src="images/arg_numerator.JPG"/>      |    Ελαχιστοποίηση <br/>  <img src="images/arg_denominator.JPG"/>     |
+| Περιορισμός <br/> <img src="images/arg_numerator_limitation.JPG"/> | Περιορισμός <br/> <img src="images/arg_denominator_limitation.JPG"/> |
+|                                                                    |                        Απλούστερη Προσέγγιση                         |
+
+<br/>
+<br/>
+
+|                           Διανύσματα υποστήριξης                            |                                    Υπόλοιπα                                     |
+| :-------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
+|                      γνωστά και ως **Οριακά πρότυπα**                       |                         γνωστά και ως **καλά πρότυπα**                          |
 | Πρότυπα x για τα οποία ισχύει<br/> <img src="./images/support_vector.jpg"/> | Πρότυπα x για τα οποία ισχύει:<br/> <img src="./images/svm_simple_vectors.jpg"> |
-|                       βρίσκονται πάνω στο margin                       |                         βρίσκονται πέρα από margin                         |
-|            <img src="./images/svm_support_vectors_map.jpg">            |              <img src="./images/svm_simple_vectors_map.jpg">               |
-|                                  λ>0                                   |                                    λ=0                                     |
+|                         βρίσκονται πάνω στο margin                          |                           βρίσκονται πέρα από margin                            |
+|              <img src="./images/svm_support_vectors_map.jpg">               |                 <img src="./images/svm_simple_vectors_map.jpg">                 |
+|                                     λ>0                                     |                                       λ=0                                       |
 
 <br/>
 <br/>
 
-## Δυικό Πρόβλημα
+## Λύση 1 : Τετραγωνικός Προγραμματισμός (Primal)
+
+### Με λίγα λόγια
+Σκοπός:
+
+|        Ελάχιστο Συνάρτησης         |                Περιορισμοί                |
+| :--------------------------------: | :---------------------------------------: |
+| <img src="images/square_algo.JPG"> | <img src="images/square_limitations.JPG"> |
+
+Στη δική μας περίπτωση,Θέτουμε:  
+<img src="./images/square_NN.JPG">
+
+<br/>
+<br/>
+
+## Λύση 2 : Δυικό Πρόβλημα (Dual)
+
 
 Υπολογίζουμε τα βάρη **w** με βάση:  
 
@@ -21,14 +77,18 @@
 
 <img src="./images/minimum_lamda.jpg">
 
+
+
+
+
 <br/>
 <br/>
 
-| Σύμβολο |                            Επεξήγηση                            |
-| :-----: | :-------------------------------------------------------------: |
+| Σύμβολο |                                Επεξήγηση                                |
+| :-----: | :---------------------------------------------------------------------: |
 |    Q    | Εσωτερικό γινόμενο διανυσμάτων<br/> <img src="./images/Q_formula.jpg"/> |
-|    g    |                    Διάνυσμα με τιμές **-1**                     |
-|    λ    |                       Lagrange Multiplier                       |
+|    g    |                        Διάνυσμα με τιμές **-1**                         |
+|    λ    |                           Lagrange Multiplier                           |
 
 <br/>
 <br/>
@@ -81,12 +141,12 @@
 
 ### Δυικό πρόβλημα vs Νέο Δυικό Πρόβλημα
 
-|                                                     Δυικό                                                     |                                                Νέο Δυικό                                                 |
-| :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
-|   καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./images/svm_simple_vectors.jpg"/>    | καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./images/svm_simple_vectors.jpg"/> |
-|     οριακό πρότυπο <span style="color:green">(κοινό)</span><br/><img src="./images/support_vector.jpg"/>      |  οριακό πρότυπο <span style="color:green">(κοινό)</span><br/> <img src="./images/support_vector.jpg"/>   |
-|                                                       -                                                       |                            κακό πρότυπο <br/> <img src="./images/bad_vectors.jpg"/>                            |
+|                                                     Δυικό                                                     |                                                   Νέο Δυικό                                                   |
+| :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|   καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./images/svm_simple_vectors.jpg"/>    |   καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./images/svm_simple_vectors.jpg"/>    |
+|     οριακό πρότυπο <span style="color:green">(κοινό)</span><br/><img src="./images/support_vector.jpg"/>      |     οριακό πρότυπο <span style="color:green">(κοινό)</span><br/> <img src="./images/support_vector.jpg"/>     |
+|                                                       -                                                       |                           κακό πρότυπο <br/> <img src="./images/bad_vectors.jpg"/>                            |
 | βέλτιστο διάνυσμα <span style="color:green">(κοινό)</span><br/> <img src="./images/dual_problem_weights.jpg"> | βέλτιστο διάνυσμα <span style="color:green">(κοινό)</span> <br/><img src="./images/dual_problem_weights.jpg"> |
-|      βέλτιστη πόλωση <span style="color:green">(κοινό)</span> <br/><img src="./images/optimal_bias.jpg">      |  βέλτιστη πόλωση  <span style="color:green">(κοινό)</span> <br/> <img src="./images/optimal_bias.jpg">   |
-|      Ελάχιστο συνάρτησης <span style="color:green">(κοινό)</span> <br/><img src="./images/minimum_lamda.jpg">      |  Ελάχιστο συνάρτησης  <span style="color:green">(κοινό)</span> <br/> <img src="./images/minimum_lamda.jpg">   |
-|      Τιμή του λ <span style="color:red">!!!</span> <br/> <img src="./images/dual_lamda_limitations.jpg">      | Τιμή του λ <span style="color:red">!!!</span> <br/> <img src="./images/new_dual_lamda_limitations.jpg">  |
+|      βέλτιστη πόλωση <span style="color:green">(κοινό)</span> <br/><img src="./images/optimal_bias.jpg">      |     βέλτιστη πόλωση  <span style="color:green">(κοινό)</span> <br/> <img src="./images/optimal_bias.jpg">     |
+|   Ελάχιστο συνάρτησης <span style="color:green">(κοινό)</span> <br/><img src="./images/minimum_lamda.jpg">    |  Ελάχιστο συνάρτησης  <span style="color:green">(κοινό)</span> <br/> <img src="./images/minimum_lamda.jpg">   |
+|      Τιμή του λ <span style="color:red">!!!</span> <br/> <img src="./images/dual_lamda_limitations.jpg">      |    Τιμή του λ <span style="color:red">!!!</span> <br/> <img src="./images/new_dual_lamda_limitations.jpg">    |
