@@ -9,7 +9,7 @@
 <br/> 
 <br/>
 
-<img src="imagez/svm_neuron.jpg"/>
+<img src="images/svm_neuron.jpg"/>
 
 
 <br/> 
@@ -18,7 +18,7 @@
 <br/>
 <br/>
 
-<img src="./imagez/about_margin.jpg">
+<img src="./images/about_margin.jpg">
 
 **Σκοπός** : Η μεγιστοποίηση περιθωρίου ανάμεσα από τα οριακά πρότυπα, έτσι ώστε σε επόμενη προσθήκη προτύπου, να **ελαχιστοποιείται η πιθανότητα** το πρότυπο αυτό να θεωρηθεί της απέναντι κλάσης.
 
@@ -31,14 +31,14 @@
 
 |                 Στοιχείο                 |               Τύπος               |
 | :--------------------------------------: | :-------------------------------: |
-| Απόσταση από το διαχωριστικό υπερεπίπεδο | <img src="./imagez/distance.jpg"> |
-|                Περιθώριο                 |  <img src="./imagez/margin.jpg">  |
+| Απόσταση από το διαχωριστικό υπερεπίπεδο | <img src="./images/distance.jpg"> |
+|                Περιθώριο                 |  <img src="./images/margin.jpg">  |
 
 #### Μεγιστοποίηση Περιθωρίου ταξινόμησης
 
 θέλουμε να βρούμε τις τιμές **w**, b.
 
-<img src="./imagez/target_weight_bias.jpg">
+<img src="./images/target_weight_bias.jpg">
 
 > με το argmax εννοούμε πως ψάχνουμε τις τιμές **w**,b για τις οποίες η τιμή της συνάρτησης **μεγιστοποιείται.** 
 
@@ -49,8 +49,8 @@
 
 |                         Παρονομαστής = 1                          |                            Αριθμητής = 1                             |
 | :----------------------------------------------------------------: | :------------------------------------------------------------------: |
-|     Μεγιστοποίηση <br/> <img src="imagez/arg_numerator.jpg"/>      |    Ελαχιστοποίηση <br/>  <img src="imagez/arg_denominator.jpg"/>     |
-| Περιορισμός <br/> <img src="imagez/arg_numerator_limitation.jpg"/> | Περιορισμός <br/> <img src="imagez/arg_denominator_limitation.jpg"/> |
+|     Μεγιστοποίηση <br/> <img src="images/arg_numerator.jpg"/>      |    Ελαχιστοποίηση <br/>  <img src="images/arg_denominator.jpg"/>     |
+| Περιορισμός <br/> <img src="images/arg_numerator_limitation.jpg"/> | Περιορισμός <br/> <img src="images/arg_denominator_limitation.jpg"/> |
 |                                                                    |                        Απλούστερη Προσέγγιση                         |
 
 <br/>
@@ -59,9 +59,9 @@
 |                           Διανύσματα υποστήριξης                            |                                    Υπόλοιπα                                     |
 | :-------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
 |                      γνωστά και ως **Οριακά πρότυπα**                       |                         γνωστά και ως **καλά πρότυπα**                          |
-| Πρότυπα x για τα οποία ισχύει<br/> <img src="./imagez/support_vector.jpg"/> | Πρότυπα x για τα οποία ισχύει:<br/> <img src="./imagez/svm_simple_vectors.jpg"> |
+| Πρότυπα x για τα οποία ισχύει<br/> <img src="./images/support_vector.jpg"/> | Πρότυπα x για τα οποία ισχύει:<br/> <img src="./images/svm_simple_vectors.jpg"> |
 |                         βρίσκονται πάνω στο margin                          |                           βρίσκονται πέρα από margin                            |
-|              <img src="./imagez/svm_support_vectors_map.jpg">               |                 <img src="./imagez/svm_simple_vectors_map.jpg">                 |
+|              <img src="./images/svm_support_vectors_map.jpg">               |                 <img src="./images/svm_simple_vectors_map.jpg">                 |
 |                                     λ>0                                     |                                       λ=0                                       |
 
 <br/>
@@ -74,10 +74,10 @@
 
 |        Ελάχιστο Συνάρτησης         |                Περιορισμοί                |
 | :--------------------------------: | :---------------------------------------: |
-| <img src="imagez/square_algo.jpg"> | <img src="imagez/square_limitations.jpg"> |
+| <img src="images/square_algo.jpg"> | <img src="images/square_limitations.jpg"> |
 
 Στη δική μας περίπτωση,Θέτουμε:  
-<img src="./imagez/square_NN.jpg">
+<img src="./images/square_NN.jpg">
 
 <br/>
 <br/>
@@ -87,11 +87,11 @@
 
 Υπολογίζουμε τα βάρη **w** με βάση:  
 
-<img src="./imagez/dual_problem_weights.jpg">
+<img src="./images/dual_problem_weights.jpg">
 
 όπου στην ουσία ψάχνουμε το **λ** το οποίο βρίσκεται από τον τύπο 
 
-<img src="./imagez/minimum_lamda.jpg">
+<img src="./images/minimum_lamda.jpg">
 
 
 
@@ -102,7 +102,7 @@
 
 | Σύμβολο |                                Επεξήγηση                                |
 | :-----: | :---------------------------------------------------------------------: |
-|    Q    | Εσωτερικό γινόμενο διανυσμάτων<br/> <img src="./imagez/Q_formula.jpg"/> |
+|    Q    | Εσωτερικό γινόμενο διανυσμάτων<br/> <img src="./images/Q_formula.jpg"/> |
 |    g    |                        Διάνυσμα με τιμές **-1**                         |
 |    λ    |                           Lagrange Multiplier                           |
 
@@ -115,8 +115,8 @@
 
 |                                                                                                                  |                                       |
 | :--------------------------------------------------------------------------------------------------------------: | :-----------------------------------: |
-|                                          Για τη βέλτιστη πόλωση ισχύει:                                          | <img src="./imagez/optimal_bias.jpg"> |
-| Αλλά, για λόγους αριθμητικής ακρίβειας ισχύει όπου έχουμε το **μέσο όρο** για όλα τα **διανύσματα υποστήριξης**. |  <img src="./imagez/mean_bias.jpg">   |
+|                                          Για τη βέλτιστη πόλωση ισχύει:                                          | <img src="./images/optimal_bias.jpg"> |
+| Αλλά, για λόγους αριθμητικής ακρίβειας ισχύει όπου έχουμε το **μέσο όρο** για όλα τα **διανύσματα υποστήριξης**. |  <img src="./images/mean_bias.jpg">   |
 
 
 
@@ -124,7 +124,7 @@
 
 Εισαγωγή σε κάθε πρότυπο μια μεταβλητή χαραλότητας **ξ** (slack variable)
 
-<img src="./imagez/insert_slack_variable.jpg">
+<img src="./images/insert_slack_variable.jpg">
 
 και ισχυέι ότι το άθροισμα των ξ > πλήθος λάθος ταξινομημένων προτύπων
 
@@ -132,18 +132,18 @@
 
 #### Θέση του ξ
 
-<img src="./imagez/ksi.jpg">
+<img src="./images/ksi.jpg">
 
 #### Νέα συνάρτηση Κόστους
 
-<img src="./imagez/new_cost_function.jpg">
+<img src="./images/new_cost_function.jpg">
 
 όπου η C είναι μια σταθερά κόστους για την οποία ισχύει:  
 Όσο μικρότερη, τόσο αγνοώ τις μεταβλητές χαλαρότητας, άρα το σύστημα δεν πιέζεται για τη βελτιστοποίηση της ταξινόμησης.
 
 Και σκοπός είναι να ικανοποιούνται οι ανισότητες :  
 
-<img src="./imagez/new_cost_function2.jpg">
+<img src="./images/new_cost_function2.jpg">
 
 #### Τιμές του λ
 
@@ -151,7 +151,7 @@
 - Αν x πάνω στο margin τότε C>λ>0 (οριακό πρότυπο)
 - Αν x πάνω από margin τότε λ=0 (καλό πρότυπο)
 
-<img src="./imagez/value_of_lamda.jpg">
+<img src="./images/value_of_lamda.jpg">
 
 
 
@@ -159,13 +159,13 @@
 
 |                                                     Δυικό                                                     |                                                   Νέο Δυικό                                                   |
 | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|   καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./imagez/svm_simple_vectors.jpg"/>    |   καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./imagez/svm_simple_vectors.jpg"/>    |
-|     οριακό πρότυπο <span style="color:green">(κοινό)</span><br/><img src="./imagez/support_vector.jpg"/>      |     οριακό πρότυπο <span style="color:green">(κοινό)</span><br/> <img src="./imagez/support_vector.jpg"/>     |
-|                                                       -                                                       |                           κακό πρότυπο <br/> <img src="./imagez/bad_vectors.jpg"/>                            |
-| βέλτιστο διάνυσμα <span style="color:green">(κοινό)</span><br/> <img src="./imagez/dual_problem_weights.jpg"> | βέλτιστο διάνυσμα <span style="color:green">(κοινό)</span> <br/><img src="./imagez/dual_problem_weights.jpg"> |
-|      βέλτιστη πόλωση <span style="color:green">(κοινό)</span> <br/><img src="./imagez/optimal_bias.jpg">      |     βέλτιστη πόλωση  <span style="color:green">(κοινό)</span> <br/> <img src="./imagez/optimal_bias.jpg">     |
-|   Ελάχιστο συνάρτησης <span style="color:green">(κοινό)</span> <br/><img src="./imagez/minimum_lamda.jpg">    |  Ελάχιστο συνάρτησης  <span style="color:green">(κοινό)</span> <br/> <img src="./imagez/minimum_lamda.jpg">   |
-|      Τιμή του λ <span style="color:red">!!!</span> <br/> <img src="./imagez/dual_lamda_limitations.jpg">      |    Τιμή του λ <span style="color:red">!!!</span> <br/> <img src="./imagez/new_dual_lamda_limitations.jpg">    |
+|   καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./images/svm_simple_vectors.jpg"/>    |   καλό πρότυπο <span style="color:green">(κοινό)</span> <br/> <img src="./images/svm_simple_vectors.jpg"/>    |
+|     οριακό πρότυπο <span style="color:green">(κοινό)</span><br/><img src="./images/support_vector.jpg"/>      |     οριακό πρότυπο <span style="color:green">(κοινό)</span><br/> <img src="./images/support_vector.jpg"/>     |
+|                                                       -                                                       |                           κακό πρότυπο <br/> <img src="./images/bad_vectors.jpg"/>                            |
+| βέλτιστο διάνυσμα <span style="color:green">(κοινό)</span><br/> <img src="./images/dual_problem_weights.jpg"> | βέλτιστο διάνυσμα <span style="color:green">(κοινό)</span> <br/><img src="./images/dual_problem_weights.jpg"> |
+|      βέλτιστη πόλωση <span style="color:green">(κοινό)</span> <br/><img src="./images/optimal_bias.jpg">      |     βέλτιστη πόλωση  <span style="color:green">(κοινό)</span> <br/> <img src="./images/optimal_bias.jpg">     |
+|   Ελάχιστο συνάρτησης <span style="color:green">(κοινό)</span> <br/><img src="./images/minimum_lamda.jpg">    |  Ελάχιστο συνάρτησης  <span style="color:green">(κοινό)</span> <br/> <img src="./images/minimum_lamda.jpg">   |
+|      Τιμή του λ <span style="color:red">!!!</span> <br/> <img src="./images/dual_lamda_limitations.jpg">      |    Τιμή του λ <span style="color:red">!!!</span> <br/> <img src="./images/new_dual_lamda_limitations.jpg">    |
 
 ## Primal ή Dual;
 
@@ -185,14 +185,14 @@
 
 | Υπολογισμός κόστους |
 | :--: |
-| <img src="./imagez/new_cost_function2.jpg">
+| <img src="./images/new_cost_function2.jpg">
 
 Μετατροπές : 
 
 | Μετατροπή | Εικόνα | 
 | :---: | :---:|
-| Πρότυπα | <img src="./imagez/phi.jpg"> |
-| Περιορισμοί | <img src="./imagez/phi_limitations.jpg">
+| Πρότυπα | <img src="./images/phi.jpg"> |
+| Περιορισμοί | <img src="./images/phi_limitations.jpg">
 
 
 ### Συναρτήσεις Kernel
@@ -201,13 +201,13 @@
 
 Το μόνο που χρειάζεται να υπολογίσουμε είναι ο lagrange multiplier.
 
-<img src="./imagez/phi_lagrange.jpg">
+<img src="./images/phi_lagrange.jpg">
 
 #### Τύπος
 
 Ορίζουμε την συνάρτηση kernel όπου: 
 
-<img src="./imagez/kernel.jpg">
+<img src="./images/kernel.jpg">
 
 η οποία επιστρέφει **αριθμό**.
 
@@ -215,9 +215,9 @@
 
 | Στοιχείο | Επεξήγηση|
 | :---:| :---:|
-| Ελάχιστο συνάρτησης κόστους| <img src="imagez/minimum_lamda.jpg">|
-| Περιορισμοί| <img src="./imagez/new_dual_lamda_limitations.jpg">|
-| Παρατήρηση | <img src="./imagez/kernel_q.jpg">|
+| Ελάχιστο συνάρτησης κόστους| <img src="images/minimum_lamda.jpg">|
+| Περιορισμοί| <img src="./images/new_dual_lamda_limitations.jpg">|
+| Παρατήρηση | <img src="./images/kernel_q.jpg">|
 
 >Δεν χρειάζεται να γνωρίζουμε τη συνάρτηση Φ() για να υπολογίσουμε τα Q,g. Χρειαζόαμστε μόνο την Κ().
 > - Κάθε συνα΄ρτηση Φ() παράγει έναν πυρήνα.
@@ -235,14 +235,14 @@
 
 #### Συνηθισμένοι Πυρήνες
 
-<img src="imagez/known_kernels.jpg"/>
+<img src="images/known_kernels.jpg"/>
 
 
 #### Λύση
 
 Σύμφωνα με όσα έχουμε πει, τα βέλτιστα **w**,b είναι 
 
-<img src="imagez/phi_solution.jpg">
+<img src="images/phi_solution.jpg">
 
 Ισχύει:
 
@@ -250,12 +250,12 @@
 - ΑΛΛΑ, δεν δίνουμε δεκάρα για το **w**!
 - Αυτό που μας νοιάζει είναι η έξοδος του ταξινομητή: 
 
-<img src="imagez/phi_exodus.jpg"/>
+<img src="images/phi_exodus.jpg"/>
 
 
 ### Παραδείγματα Πυρήνων
 
-<img src="imagez/kernel_examples.jpg"/>
+<img src="images/kernel_examples.jpg"/>
 
 Όσο μεγαλύτερο το σ, τόσο μεγαλύτερες οι καμπάνες / εμβέλεια που καλύπτουν τα πρότυπα, άρα μεγαλύτερη έκταση της κλάσης.
 
