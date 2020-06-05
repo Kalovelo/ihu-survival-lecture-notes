@@ -1,8 +1,6 @@
 # Average paper structure
 
-## Example 0
-
-**Vulnerability Assessment & Penetration Testing as a Cyber Defence Technology**
+## Example 0 - Vulnerability Assessment & Penetration Testing as a Cyber Defence Technology
 *Jai Narayan Goel, BM Mehtre*
 0. Abstract
     - Today's systems
@@ -35,7 +33,7 @@
 7. Conclusion and Future Work
 8. References
 
-## Example 1 
+## Example 1 - An Overview of Penetration Testing
 
 <a href="https://www.researchgate.net/publication/274174058_An_Overview_of_Penetration_Testing">Link</a>
 
