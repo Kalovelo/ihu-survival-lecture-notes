@@ -207,3 +207,41 @@ inspect(head(rules,10))
 
 redundant_rules <- is.redundant(rules)
 nr_rules <- rules[!redundant_rules]
+
+
+#STEP 12
+View(nr_rules)
+#rules are already sorted by lift,therefore we get a 10piece chunk and we're good to go
+inspect(head(nr_rules,n=10))
+
+rules_G_VG_C10 <- subset(rules,lhs %in% c('C10 - Good','C10 - Very Good'))
+
+#Wish Grep worked properly
+nrrules_Exc <- subset(nr_rules,lhs %pin%  'Excellent' | rhs %pin%  'Excellent')
+
+#Check our execellent redundant bois
+inspect(nrrules_Exc)
+
+#STEP 13
+#Σε αντίθεση με το Lift, δεν ισχύει η συμμετρική ιδιότητα συνεπώς
+#η αγορά ενός αγαθού Χ μπορεί να τείνει στην αγορά του Υ,
+#αλλά δεν σημαίνει απαραίτητα πως η αγορά του Υ τείνει στην αγορά του Χ.
+
+#STEP 14 - [HALT!] not sure if rest courses should be considered.
+
+#No time for efficient code right now
+juicy_rules<- subset(nr_rules,
+  (
+    (lhs %in%  'C4 - Very Good' | lhs %in%  'C4 - Excellent') 
+    | (lhs %in%  'C6 - Very Good' | lhs %in%  'C6 - Excellent')
+  )
+  & (rhs %pin%  'Very Good' | rhs %pin%  'Excellent'))
+
+inspect(juicy_rules)
+
+#Add Conviction Column and filter out redundant dudes
+juice<-cbind(as(juicy_rules, "data.frame"), conviction=interestMeasure(juicy_rules, "conviction",trans))
+
+#sort it out by conviction
+juice_conv_ordered<-juice[order(juice$conviction,decreasing = TRUE),]
+View(juice_conv_ordered)
